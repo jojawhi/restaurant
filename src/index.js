@@ -1,7 +1,10 @@
 import './style.css';
-import Logo from './nanda-logo.jpg';
+import loadHome from './home.js';
+import loadMenu from './menu';
+import loadContact from './contact';
+import Logo from './images/nanda-logo.jpg';
 
-const content = document.querySelector('#content');
+const wrapper = document.querySelector('#wrapper');
 
 const logo = () => {
     
@@ -9,7 +12,7 @@ const logo = () => {
     myLogo.src = Logo;
     myLogo.classList.add('logo');
 
-    content.appendChild(myLogo);
+    wrapper.appendChild(myLogo);
 
 
 }

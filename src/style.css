@@ -1,4 +1,310 @@
-.logo {
-    height: 300px;
-    width: 300px;
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+/*CSS Resets*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+/*Fonts*/
+
+/*Variables*/
+
+:root {
+    --background: #2b2b2b;
+    --menu-background: rgba(20 20 20 / 0.65);
+    --white-font: hsl(30, 35%, 95%);
+    --orange-font: hsl(40, 100%, 65%);
+}
+
+/*Content*/
+
+#wrapper {
+    display: grid;
+    grid-template-rows: 20% 66% 12%;
+    align-items: space-between;
+    justify-content: center;
+}
+
+/*Header*/
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 15vh;
+    width: 100%;
+    padding-top: 2rem;
+    font-family: 'Architects Daughter', sans-serif;
+    font-size: 1.25rem;
+    color: var(--white-font);
+    background: var(--background);
+    border-bottom: 3px dashed var(--white-font);
+}
+
+.logo-wrapper {
+    height: auto;
+    width: 70%;
+    max-width: 400px;
+    padding: 0.5rem 0.5rem;
+    font-family: 'Carter One', sans-serif;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: var(--orange-font);
+    text-align: center;
+    background: var(--background);
+    border: 3px dashed var(--white-font);
+    border-radius: 8px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem 0;
+}
+
+.nav-link-wrapper {
+
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-link-active {
+    border-bottom: 2px solid var(--white-font);
+}
+
+.nav-link:visited {
+    color: var(--white-font);
+}
+
+/*Content Wrapper*/
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-family: 'Architects Daughter', sans-serif;
+    color: var(--white-font);
+    overflow-y: scroll;
+}
+
+/*Home Page*/
+
+.background-image {
+    background: url('/images/chicken.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-page-div {
+    align-self: center;
+    height: auto;
+    min-height: 40vh;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: rgba(20, 20, 20, 0.45);
+    border: 3px dashed var(--white-font);
+    border-radius: 10%;
+}
+
+.home-page-heading {
+    font-family: 'Architects Daughter', sans-serif;
+    font-size: 1.75rem;
+    color: var(--white-font);
+}
+
+.home-page-subheading {
+    margin-top: 2rem;
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 1.25rem;
+    color: var(--orange-font);
+}
+
+/*Menu*/
+
+.chicken-menu {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1.5rem;
+}
+
+.chicken-menu-section,
+.menu-section {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: var(--menu-background);
+    border: 2px solid var(--orange-font);
+    border-radius: 10px;
+
+}
+
+h2 {
+    font-family: 'Hammersmith One', sans-serif;
+    color: var(--orange-font);
+}
+
+h2,
+h3,
+p {
+    text-align: center;
+}
+
+h3 {
+    padding-top: 1rem;
+}
+
+.category-description-text {
+    color: var(--orange-font);
+}
+
+.menu-description-text {
+    font-size: 0.75rem;
+
+}
+
+.menu-list-wrapper {
+    display: grid;
+    grid-template-columns: 85% 1fr;
+    grid-column-gap: 0.5rem;
+    width: 85%;
+    min-width: 195px;
+    max-width: 250px;
+
+}
+
+.menu-list-item {
+    padding-left: 0.75rem;
+}
+
+.menu-list-price {
+    font-family: 'Hammersmith One', sans-serif;
+    font-weight: 500;
+}
+
+.menu-section .menu-list-price {
+    text-align: center;
+}
+
+/*Contact*/
+
+.contact-page-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: center;
+    height: auto;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: rgba(20, 20, 20, 0.45);
+    border: 3px dashed var(--white-font);
+    border-radius: 3%;
+}
+
+.contact-page-heading,
+.contact-page-subheading {
+    padding: 0;
+}
+
+.map-div {
+    height: 10rem;
+    width: 90%;
+    margin: 0 auto;
+    background: url('images/map.png');
+    background-size: cover;
+    border-radius: 4px;
+}
+
+.bold {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/*Footer*/
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 5rem;
+    width: 100%;
+    min-width: 100vw;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top: 3px dashed var(--white-font);
+    background: var(--background);
+    font-family: 'Architects Daughter', sans-serif;
+    color: var(--white-font);
+    text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+
+    .header {
+        justify-content: space-evenly;
+    }
+
+    .nav {
+        max-width: 800px;
+    }
+
+    .logo-wrapper {
+        max-width: 600px;
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .home-page-div {
+        max-width: 600px;
+    }
+
+    .home-page-heading {
+        font-size: 3.5rem;
+    }
+
+    .home-page-subheading {
+        font-size: 2rem;
+    }
+
+    .chicken-menu {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    .contact-page-div {
+        height: 80%;
+        max-width: 600px;
+    }
+
+    .map-div {
+        height: 60%;
+    }
+
 }
