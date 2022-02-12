@@ -350,12 +350,12 @@ const generateSidesMenu = () => {
         {
             category: 'Sides',
             name: 'Cauliflower Fries',
-            price: '6.50'
+            price: '6.5'
         },
         {
             category: 'Sides',
             name: 'Onion Rings',
-            price: '6.50'
+            price: '6.5'
         },
         {
             category: 'Sides',
@@ -365,7 +365,7 @@ const generateSidesMenu = () => {
         {
             category: 'Sides',
             name: 'Truffle Fries',
-            price: '7.50'
+            price: '7.5'
         }
     ];
 

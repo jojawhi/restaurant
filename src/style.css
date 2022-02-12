@@ -289,7 +289,7 @@ h3 {
 @media only screen and (min-width: 700px) {
 
     #wrapper {
-        grid-template-rows: 20% 66% 13%;
+        grid-template-rows: 20% 68% 12%;
     }
 
     .header {
@@ -350,6 +350,24 @@ h3 {
 
     .footer-text {
         font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .menu {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .chicken-menu-section,
+    .menu-section {
+    max-width: 333px;
+    font-size: 1.25rem;
+    }
+
+    .menu-description-text {
+        font-size: 1rem;
     }
 
 }
