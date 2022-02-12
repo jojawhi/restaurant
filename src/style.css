@@ -13,12 +13,14 @@
     padding: 0;
 }
 
+/*
 html,
 body,
 #wrapper {
     height: 100%;
     width: 100%;
 }
+*/
 
 /*Fonts*/
 
@@ -35,9 +37,10 @@ body,
 
 #wrapper {
     display: grid;
-    grid-template-rows: 20% 66% 12%;
+    grid-template-rows: 20% 68% 12%;
     align-items: space-between;
     justify-content: center;
+    height: 100vh;
 }
 
 /*Header*/
@@ -50,7 +53,7 @@ body,
     height: 100%;
     min-height: 15vh;
     width: 100%;
-    padding-top: 2rem;
+    padding: 2rem 0 0.5rem 0;
     font-family: 'Architects Daughter', sans-serif;
     font-size: 1.25rem;
     color: var(--white-font);
@@ -62,10 +65,10 @@ body,
     height: auto;
     width: 70%;
     max-width: 400px;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 0 0.5rem 0;
     font-family: 'Carter One', sans-serif;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
     color: var(--orange-font);
     text-align: center;
     background: var(--background);
@@ -78,18 +81,25 @@ body,
     justify-content: space-around;
     width: 100%;
     max-width: 500px;
-    padding: 1rem 0;
-}
-
-.nav-link-wrapper {
-
+    padding: 1rem 0 1.25rem 0;
 }
 
 .nav-link {
-    text-decoration: none;
+    font-family: 'Architects Daughter', sans-serif;
+    font-size: 1rem;
+    color: var(--white-font);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    transition: all 200ms;
 }
 
-.nav-link-active {
+.nav-link:hover {
+    border-bottom: 2px solid var(--white-font);
+}
+
+.active {
     border-bottom: 2px solid var(--white-font);
 }
 
@@ -102,22 +112,28 @@ body,
 .content-wrapper {
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: auto;
     width: 100%;
     font-family: 'Architects Daughter', sans-serif;
     color: var(--white-font);
+    
     overflow-y: scroll;
+    
 }
 
 /*Home Page*/
 
 .background-image {
-    background: url('/images/chicken.jpg') no-repeat;
+    background: url('/src/images/chicken.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .home-page-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     align-self: center;
     height: auto;
     min-height: 40vh;
@@ -145,10 +161,10 @@ body,
 
 /*Menu*/
 
-.chicken-menu {
+.menu {
     display: grid;
     grid-gap: 1rem;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .chicken-menu-section,
@@ -163,7 +179,8 @@ body,
 
 }
 
-h2 {
+.menu-section h2,
+.chicken-menu-section h2 {
     font-family: 'Hammersmith One', sans-serif;
     color: var(--orange-font);
 }
@@ -189,12 +206,11 @@ h3 {
 
 .menu-list-wrapper {
     display: grid;
-    grid-template-columns: 85% 1fr;
+    grid-template-columns: 80% 1fr;
     grid-column-gap: 0.5rem;
-    width: 85%;
+    width: 100%;
     min-width: 195px;
-    max-width: 250px;
-
+    max-width: 280px;
 }
 
 .menu-list-item {
@@ -232,11 +248,16 @@ h3 {
     padding: 0;
 }
 
+.contact-page-heading {
+    font-family: 'Architects Daughter', sans-serif;
+    color: var(--white-font);
+}
+
 .map-div {
     height: 10rem;
     width: 90%;
     margin: 0 auto;
-    background: url('images/map.png');
+    background: url('/src/images/map.png');
     background-size: cover;
     border-radius: 4px;
 }
@@ -267,12 +288,20 @@ h3 {
 
 @media only screen and (min-width: 700px) {
 
+    #wrapper {
+        grid-template-rows: 20% 66% 13%;
+    }
+
     .header {
         justify-content: space-evenly;
     }
 
     .nav {
         max-width: 800px;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
     }
 
     .logo-wrapper {
@@ -293,7 +322,7 @@ h3 {
         font-size: 2rem;
     }
 
-    .chicken-menu {
+    .menu {
         grid-template-columns: 1fr 1fr;
         grid-gap: 1rem;
     }
@@ -303,8 +332,24 @@ h3 {
         max-width: 600px;
     }
 
+    .contact-page-heading {
+        font-size: 2rem;
+    }
+
+    .contact-page-subheading {
+        font-size: 1.5rem;
+    }
+
+    .bold {
+        font-size: 2.25rem;
+    }
+
     .map-div {
         height: 60%;
+    }
+
+    .footer-text {
+        font-size: 1.5rem;
     }
 
 }
