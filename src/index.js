@@ -11,7 +11,7 @@ const generateHeader = () => {
     const header = document.createElement('div');
     header.classList.add('header');
 
-    header.appendChild(generateTextLogo('NANADA CHICKEN'));
+    header.appendChild(generateTextLogo('LAMBDA CHICKEN'));
     header.appendChild(generateNav(generateNavLinks()));
 
     wrapper.appendChild(header);
